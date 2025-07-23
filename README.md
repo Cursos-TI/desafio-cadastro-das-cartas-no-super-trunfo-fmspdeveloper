@@ -1,94 +1,87 @@
-# Desafio Super Trunfo - Países - Cadastro das Cartas
+# 🃏 Super Trunfo - Cidades do Brasil (Projeto em C)
 
-Bem-vindo ao desafio "Super Trunfo - Países"! No jogo Super Trunfo, os jogadores comparam os atributos das cartas para determinar a mais forte. O tema deste Super Trunfo é "Países", onde você comparará os atributos das cidades.
+Este projeto em linguagem C foi desenvolvido como atividade acadêmica. O objetivo é simular a criação de duas cartas do jogo Super Trunfo com informações sobre cidades brasileiras.
 
-A empresa MateCheck contratou você para desenvolver a parte inicial do jogo, que consiste no cadastro das cartas.
+## 📋 Descrição do Programa
 
-O desafio está dividido em três níveis: Novato, Aventureiro e Mestre, com cada nível adicionando mais complexidade ao anterior.  **Você deve escolher qual desafio quer realizar.**
+O programa solicita ao usuário que insira os dados de **duas cartas**, cada uma representando uma cidade, com os seguintes campos:
 
-🚨 **Atenção:** O nível Novato do desafio é focado apenas no cadastro das cartas, utilizando as funções `scanf` para ler os dados e `printf` para exibi-los.
+- Estado (ex: "SP", "RJ", etc.)
+- Código da carta (número de 01 a 04)
+- Nome da cidade
+- População
+- Área da cidade (em km²)
+- PIB (Produto Interno Bruto, em bilhões)
+- Número de pontos turísticos
 
-## 🎮 Nível Novato: Cadastro Básico
+Após o preenchimento, o programa exibe todas as informações cadastradas de forma organizada e formatada no terminal.
 
-No nível Novato, você iniciará criando o sistema básico do jogo Super Trunfo com o tema "Países". As cartas serão divididas por estados, cada um com quatro cidades.  Imagine um país dividido em oito estados (A a H), e cada estado com quatro cidades (1 a 4).  A combinação forma o código da carta (ex: A01, B02).
+---
 
-🚩 **Objetivo:** Criar um programa em C que cadastra **duas** cartas com os seguintes atributos:
+## 💻 Exemplo de Uso
 
-*   População (`int`)
-*   Área (`float`)
-*   PIB (`float`)
-*   Número de pontos turísticos (`int`)
+Carta 1:
+Digite o estado: SP
+Digite o código da carta: 1
+Digite o nome da cidade: SãoPaulo
+Digite a população da cidade: 12300000
+Digite a área da cidade (em km²): 1521.11
+Digite o PIB da cidade (em bilhões): 699.28
+Digite o número de pontos turísticos: 50
 
-⚙️ **Funcionalidades do Sistema:**
+Carta 2:
+Digite o estado: RJ
+Digite o código da carta: 2
+Digite o nome da cidade: RioDeJaneiro
+Digite a população da cidade: 6748000
+Digite a área da cidade (em km²): 1200.25
+Digite o PIB da cidade (em bilhões): 300.50
+Digite o número de pontos turísticos: 30
 
-*   O sistema permitirá ao usuário cadastrar os dados de **duas** cartas manualmente via terminal.
-*   Após o cadastro, o sistema exibirá os dados de cada cidade de forma organizada.
+--- Dados das Cartas ---
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+Carta 1:
+Estado: SP
+Código: B01
+Nome da Cidade: SãoPaulo
+População: 12300000
+Área: 1521.11 km²
+PIB: 699.28 bilhões de reais
+Número de Pontos Turísticos: 50
 
-*   O usuário insere os dados de cada carta interativamente via `scanf`.
-*   O programa exibe os dados cadastrados usando `printf`, com cada atributo em uma nova linha.
-
-**Simplificações para o Nível Novato:**
-
-*   Cadastre apenas **duas** cartas.
-*   Concentre-se na leitura, armazenamento e exibição. Não implemente comparações ou outros recursos.
-*   **Não use** laços (`for`, `while`) ou condicionais (`if`, `else`).
-
-
-## 🛡️ Nível Aventureiro: Cálculo de Atributos
-
-No nível Aventureiro, você expandirá o sistema para incluir o cálculo de dois novos atributos: Densidade Populacional e PIB per Capita.
-
-🆕 **Diferença em relação ao Nível Novato:**
-
-*   **Novos Atributos:**
-    *   Densidade Populacional: População / Área (`float`)
-    *   PIB per Capita: PIB / População (`float`)
-
-⚙️ **Funcionalidades do Sistema:**
-
-*   O sistema calculará automaticamente a Densidade Populacional e o PIB per Capita.
-*   Os novos atributos serão exibidos junto com os demais.
-
-📥 **Entrada** e 📤 **Saída de Dados:**
-
-*   Mesma entrada do nível Novato.
-*   A saída exibirá também os atributos calculados.
-
-**Simplificações para o Nível Intermediário:**
-
-*   Continue cadastrando apenas **duas** cartas.
-*   Continue **sem usar** laços (`for`, `while`) ou condicionais (`if`, `else`).
+Carta 2:
+Estado: RJ
+Código: B02
+Nome da Cidade: RioDeJaneiro
+População: 6748000
+Área: 1200.25 km²
+PIB: 300.50 bilhões de reais
+Número de Pontos Turísticos: 30
 
 
+---
 
-## 🏆 Nível Mestre: Comparação e Super Poder
+## 🧠 Conceitos Aplicados
 
-No nível Mestre, você implementará a comparação entre duas cartas e o cálculo do "Super Poder".
+- Entrada e saída de dados com `scanf()` e `printf()`
+- Manipulação de strings e tipos primitivos em C
+- Organização de dados e exibição formatada
+- Prática de lógica de programação
 
-🆕 **Diferença em relação ao Nível Aventureiro:**
+---
 
-*   **Comparação de Cartas:** O usuário poderá comparar as duas cartas.
-*   **Super Poder:** Soma de todos os atributos (inclusive os calculados), com a densidade populacional *invertida* antes da soma (1/densidade).  Tipo: `float`.
+## 📚 Requisitos
 
-⚙️ **Funcionalidades do Sistema:**
+- Compilador C (como `gcc`)
+- Terminal para executar o programa
 
-*   Comparação atributo a atributo, mostrando qual carta venceu (1 se a Carta 1 vence, 0 se a Carta 2 vence).
-*   Para Densidade Populacional, vence a carta com o *menor* valor.
-*   Para os demais atributos (e o Super Poder), vence a carta com o *maior* valor.
+---
 
-📥 **Entrada** e 📤 **Saída de Dados:**
+## 🚀 Como Compilar
 
-*   Mesma entrada dos níveis anteriores, mas a População agora é `unsigned long int`.
-*   A saída mostrará o resultado da comparação para cada atributo e o Super Poder.
+```bash
+gcc super_trunfo.c -o super_trunfo
+./super_trunfo
 
-**Observação:**  Preste atenção à conversão de tipos ao calcular o Super Poder!
-
-
-## 🏁 Conclusão
-
-Ao concluir qualquer um dos níveis, você terá dado um passo importante no desenvolvimento do Super Trunfo - Países. Boa sorte e divirta-se programando!
-
-Equipe de Ensino - MateCheck
-content_copy
+🧑‍🎓 Autor
+Projeto desenvolvido por FMDeveloper como parte das atividades da disciplina de Programação em C da faculdade.
