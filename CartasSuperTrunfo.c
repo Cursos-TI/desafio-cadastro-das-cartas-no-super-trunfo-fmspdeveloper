@@ -142,6 +142,7 @@ void jogo()
         {
             printf("Empate!\n");
         }
+        break;
     case 3:
         // calculo area
         printf("\n--- Comparando Área ---\n");
@@ -164,12 +165,41 @@ void jogo()
 
     case 4:
         // calculo pib
-        printf("Pib per Capita: Carta %d venceu (%d)\n",
-               (resultadopibPerCapita1 > resultadopibPerCapita2) ? 1 : 2, (resultadopibPerCapita1 > resultadopibPerCapita2) ? 1 : 0);
+        printf("\n--- Comparando Pontos Turisticos ---\n");
+        printf("%s: %d Pontos Turisticos\n", nome_cidade1, resultadopibPerCapita1);
+        printf("%s: %d Pontos Turisticos\n", nome_cidade2, resultadopibPerCapita2);
+
+        if (resultadopibPerCapita1 > resultadopibPerCapita2)
+        {
+            printf("Vencedor: %d\n", nome_cidade1);
+        }
+        else if (resultadopibPerCapita2 > resultadopibPerCapita1)
+        {
+            printf("Vencedor: %d\n", nome_cidade2);
+        }
+        else
+        {
+            printf("Empate!\n");
+        }
+
         break;
     case 5:
-        printf("Pontos Turisticos: Carta %d venceu (%d)\n",
-               (pontos_turisticos1 > pontos_turisticos2) ? 1 : 2, (pontos_turisticos1 > pontos_turisticos2) ? 1 : 0);
+        printf("\n--- Comparando Pontos Turisticos ---\n");
+        printf("%s: %d Pontos Turisticos\n", nome_cidade1, pontos_turisticos1);
+        printf("%s: %d Pontos Turisticos\n", nome_cidade2, pontos_turisticos2);
+        if (pontos_turisticos1 > pontos_turisticos2)
+        {
+            printf("Vencedor: %d\n", nome_cidade1);
+        }
+        else if (pontos_turisticos2 > pontos_turisticos1)
+        {
+            printf("Vendecor: %d\n", nome_cidade2);
+        }
+        else
+        {
+            printf("Empate!\n");
+        }
+        break;
     case 6:
         printf("\n--- Comparando Densidade Demografica ---\n");
         printf("%s: %.2f km²\n", nome_cidade1, resultadoDensidade1);
@@ -192,8 +222,6 @@ void jogo()
         printf("Opcao Invalida\n");
         break;
     }
-
-
 }
 
 int main()
